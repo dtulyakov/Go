@@ -1,0 +1,6 @@
+# ALL
+*~
+*.log
+/tmp
+/old
+#EOF
