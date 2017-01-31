@@ -4,8 +4,6 @@ import "os/exec"
 
 func main() {
   app := "echo"
-  //app := "buah"
-
   arg0 := "-e"
   arg1 := "Hello world"
   arg2 := "\n\tfrom"
