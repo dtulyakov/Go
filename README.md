@@ -2,8 +2,6 @@
 
 ```bash
 
-sudo apt-get install golang -y
-
-go version
+sudo apt-get install golang -y && go version
 
 ```
