@@ -15,8 +15,8 @@ func main() {
   stdout, err := cmd.Output()
 
   if err != nil {
-      println(err.Error())
-      return
+    println(err.Error())
+    return
   }
 
   print(string(stdout))
