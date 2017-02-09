@@ -1,14 +1,24 @@
-package hostname
+package main
 
-import "os"
+import (
+    "fmt"
+    "log"
+    "os/exec"
+    "os"
+)
 
-func Get() string {
-	if hostname := os.Getenv("SCOPE_HOSTNAME"); hostname != "" {
-		return hostname
-	}
-	hostname, err := os.Hostname()
-	if err != nil {
-		return "(unknown)"
-	}
-	return hostname
+func main() {
+    out, err := exec.Command("date", "+%Y-%M-%d").Output()
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    hostname, err := os.Hostname()
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    fmt.Printf("Это лять hostname %s\n", hostname)
+    fmt.Printf("Это лять out %s\n", out)
 }
+
